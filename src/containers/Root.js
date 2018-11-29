@@ -1,11 +1,21 @@
 import React from 'react';
+import { Provider } from 'react-redux';
 
-const Root = (props) => {
+import { store } from '../store/index';
+import App from './App';
+
+import '../styles/Global.scss';
+import styles from '../styles/Root.module.scss';
+
+const Root = () => {
     return (
-        <div>
-            <h1>My Website</h1>
-        </div>
+        <Provider store={store}>
+            <div className={styles.Root}>
+                <App />
+            </div>
+        </Provider>
     );
-};
+}; 
+
 
 export default Root;

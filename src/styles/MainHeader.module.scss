@@ -1,0 +1,51 @@
+@import './constants.scss';
+@import './animation.scss';
+
+.MainHeader {
+    display: flex;
+    flex: 0 0 56%;
+    justify-content: center;
+    
+    flex-direction: column;
+    overflow: hidden;
+    font-family: $headerFonts;
+    font-size: inherit;
+    letter-spacing: 5px;
+    line-height: 1.2;
+    backface-visibility: hidden;
+
+    &__title {
+        margin: 0;
+        font-size: 9rem;
+
+        &2 {
+            color: $blue;
+            margin: 0;
+            font-size: 8rem;
+            animation-name: header;
+            animation-duration: 2s;
+            animation-iteration-count: ease-in;
+            animation-delay: 0;
+        }
+
+        &3 {
+            color: $blue;
+            margin: 0;
+            font-size: 8rem;
+            animation-name: header;
+            animation-duration: 2s;
+            animation-iteration-count: ease-in;
+            animation-delay: 1s;
+        }
+
+        &4 {
+            color: $blue;
+            margin: 0;
+            font-size: 8rem;
+            animation-name: header;
+            animation-duration: 2s;
+            animation-iteration-count: ease-in;
+            animation-delay: 2s;
+        }
+    }
+}

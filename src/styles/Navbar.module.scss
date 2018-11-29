@@ -1,0 +1,27 @@
+@import './constants.scss';
+
+.Navbar {
+    display: flex;
+    background-color: $grey;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 5.4em;
+    font-family: $headerFonts;
+    color: $white;
+    flex: 0 0 15%;
+    
+
+    &__item {
+        padding: 2rem;
+        list-style: none;
+        cursor: pointer;
+
+
+        &:last-child {
+            font-size: 1rem;
+            font-family: $mainFonts;
+            transform: translateY(600%);
+        }
+    }
+}
