@@ -10,8 +10,6 @@ import SocialLinks from '../components/SocialLinks';
 import styles from '../styles/App.module.scss';
 
 class App extends Component {
-    
-
     render () {
         let content = null;
 
@@ -19,7 +17,7 @@ class App extends Component {
             content = <About />
         } else if (this.props.main === 'skills') {
             content= <Skills />
-        } else {
+        } else if (this.props.main === 'project') {
             content = <Project />
         };
 

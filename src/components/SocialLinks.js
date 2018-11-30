@@ -1,7 +1,5 @@
 import React from 'react';
 
-
-
 import styles from '../styles/SocialLinks.module.scss';
 
 const socialLinks = () => {
@@ -17,6 +15,9 @@ const socialLinks = () => {
             </a>
             <a href='https://github.com/giangnguyen1992' target='_blank' rel="noopener noreferrer" className={styles.SocialLinks__link}>
                 <i className={`fab fa-github`}></i>
+            </a>
+            <a href='https://github.com/giangnguyen1992' target='_blank' rel="noopener noreferrer" className={styles.SocialLinks__link}>
+                <i className={`fas fa-envelope`}></i>
             </a>
         </div>
     );

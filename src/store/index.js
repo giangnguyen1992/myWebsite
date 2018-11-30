@@ -1,8 +1,11 @@
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
+import logger from 'redux-logger';
+
 import reducer from '../reducers/index';
 
 const initialState = {
-    main: 'about'
+    main: 'about',
+    modal: false
 };
 
-export const store = createStore(reducer, initialState);
+export const store = createStore(reducer, initialState, applyMiddleware(logger));
