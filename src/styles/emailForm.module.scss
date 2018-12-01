@@ -1,0 +1,50 @@
+@import './constants.scss';
+
+.emailForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: inherit;
+    
+    &__title {
+        font-family: $headerFonts;
+        font-size: 5rem;
+        margin: 0;
+    }
+
+    &__text {
+        font-size: 1.4rem;
+        margin-bottom: 4rem;
+    }
+
+    &__upper {
+        width: 60%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__input {
+        width: 48%;
+        padding: 1rem;
+        font-family: inherit;
+        background-color: $white;
+        border-radius: 1px;
+        border: .2px solid $grey; 
+
+        &:focus {
+           outline: none;
+        }
+    }
+
+    &__textInput {
+        width: 60%;
+        height: 8rem;
+        padding: 1rem;
+        font-family: inherit;
+        background-color: $white;
+        border-radius: 1px;
+        border: .2px solid $grey;
+        margin-top: 3rem;
+    }
+}

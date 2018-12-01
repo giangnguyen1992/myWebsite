@@ -1,8 +1,11 @@
 import React from 'react';
+import { connect } from 'react-redux';
+
+import { openModal } from '../actions/index';
 
 import styles from '../styles/SocialLinks.module.scss';
 
-const socialLinks = () => {
+const socialLinks = (props) => {
     return (
         <div className={styles.SocialLinks}>
             <button className={styles.Nightmode}> <i className={`fas fa-moon`}></i></button>
@@ -16,11 +19,19 @@ const socialLinks = () => {
             <a href='https://github.com/giangnguyen1992' target='_blank' rel="noopener noreferrer" className={styles.SocialLinks__link}>
                 <i className={`fab fa-github`}></i>
             </a>
-            <a href='https://github.com/giangnguyen1992' target='_blank' rel="noopener noreferrer" className={styles.SocialLinks__link}>
+            <button onClick={props.dispatchModal} className={styles.SocialLinks__link}>
                 <i className={`fas fa-envelope`}></i>
-            </a>
+            </button>
         </div>
     );
 };
 
-export default socialLinks;
+const mapDispatchToProps = dispatch => {
+    return {
+        dispatchModal: () => {
+            return dispatch(openModal());
+        }
+    }
+}
+
+export default connect(null, mapDispatchToProps)(socialLinks);
