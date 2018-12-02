@@ -24,4 +24,14 @@
         flex-direction: column;
         justify-content: center;
     }
+
+    &__closeBtn {
+        position: absolute;
+        top: 1%;
+        right: 1%;
+        font-size: 4rem;
+        color: $grey;
+        border: none;
+        background-color: $white;
+    }
 }

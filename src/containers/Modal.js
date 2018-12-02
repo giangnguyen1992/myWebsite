@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import EmailForm from './emailForm';
+import EmailForm from '../components/emailForm';
 import { closeModal } from '../actions/index';
 
 import styles from '../styles/Modal.module.scss';
@@ -28,6 +28,9 @@ class Modal extends Component {
             <div className={styles.Modal}>
                 <div ref={node => this.node = node} className={styles.Modal__content}>
                     <EmailForm />
+                    <button onClick={this.props.dispatchCloseModal} className={styles.Modal__closeBtn}>
+                        <i className={`fas fa-times`}></i>
+                    </button>
                 </div>
             </div>
             );

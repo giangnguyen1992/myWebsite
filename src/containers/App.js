@@ -5,8 +5,8 @@ import Navbar from './Navbar';
 import About from '../components/About';
 import Skills from '../components/Skills';
 import Project from '../components/Project';
-import SocialLinks from '../components/SocialLinks';
-import Modal from '../components/Modal';
+import SocialLinks from './SocialLinks';
+import Modal from './Modal';
 import { closeModal } from '../actions/index';
 
 import styles from '../styles/App.module.scss';

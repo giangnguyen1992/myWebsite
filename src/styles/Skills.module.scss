@@ -1,4 +1,91 @@
+@import './constants.scss';
+
 .Skills {
     display: flex;
     flex-grow: 1;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto;
+
+    &__title {
+        font-family: $headerFonts;
+        font-size: 7rem;
+        margin-bottom: 3rem;
+        
+        &::after {
+            content: '';
+            position: relative;
+            width: 70%;
+            left: 15%;
+            
+            display: block;
+            border-bottom: .7rem solid $grey;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: row;
+
+        &_item {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            font-size: 3rem;
+            margin: 0 6rem;
+
+            &_icon {
+                color: $blue;
+            }
+
+            p {
+                font-size: 1.8rem;
+            }
+        }
+    }
+
+    &__upper {
+        display: flex;
+        margin-top: 5rem;
+    }
+
+    &__left {
+        flex: 0 1 40%;
+        padding-left: 5rem;
+
+        &_text {
+            font-size: 2rem;
+            text-align: justify;
+        }
+
+    }
+
+    &__right {
+        flex: 0 1 60%;
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: 7rem;
+        padding: 4rem;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid $grey;
+        box-shadow: .7rem .7rem 5rem rgba(0, 0, 0, 0.75);
+        
+        &_box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 2rem;
+            padding: 2rem;
+        }
+
+        &_logo {
+            max-width: 8rem;
+            height: auto;
+        }
+    }
 }
+

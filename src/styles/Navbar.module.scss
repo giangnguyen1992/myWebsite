@@ -17,11 +17,11 @@
         list-style: none;
         cursor: pointer;
 
-
         &:last-child {
             font-size: 1rem;
             font-family: $mainFonts;
             transform: translateY(600%);
+            cursor: default;
         }
     }
 }

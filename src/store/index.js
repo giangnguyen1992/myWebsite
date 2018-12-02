@@ -4,7 +4,7 @@ import logger from 'redux-logger';
 import reducer from '../reducers/index';
 
 const initialState = {
-    main: 'about',
+    main: 'skills',
     modal: false
 };
 
