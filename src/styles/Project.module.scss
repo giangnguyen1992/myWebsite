@@ -1,4 +1,12 @@
+@import './constants.scss';
+
 .Project {
     display: flex;
     flex-grow: 1;
+    padding: 5rem;
+
+    @media screen and (max-width: $sm) {
+        margin-top: 15rem;
+        overflow: auto;
+    }
 }

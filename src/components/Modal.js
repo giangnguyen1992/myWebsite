@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
 
-import EmailForm from '../components/emailForm';
-import { closeModal } from '../actions/index';
+import EmailForm from './EmailForm';
 
 import styles from '../styles/Modal.module.scss';
 
@@ -19,8 +17,7 @@ class Modal extends Component {
         if (this.node.contains(e.target)) {
             return;
         }
-
-        this.props.dispatchCloseModal();
+        this.props.click();
     };
 
     render () {
@@ -28,7 +25,7 @@ class Modal extends Component {
             <div className={styles.Modal}>
                 <div ref={node => this.node = node} className={styles.Modal__content}>
                     <EmailForm />
-                    <button onClick={this.props.dispatchCloseModal} className={styles.Modal__closeBtn}>
+                    <button onClick={this.props.click} className={styles.Modal__closeBtn}>
                         <i className={`fas fa-times`}></i>
                     </button>
                 </div>
@@ -37,12 +34,5 @@ class Modal extends Component {
     }
 }    
 
-const mapDispatchToProps = dispatch => {
-    return {
-        dispatchCloseModal: () => {
-            dispatch(closeModal());
-        }
-    };
-};
 
-export default connect(null, mapDispatchToProps) (Modal);
+export default Modal;

@@ -4,9 +4,9 @@ import styles from '../styles/Project.module.scss';
 
 const project = () => {
     return (
-        <div className={styles.Project}>
-            <h1>project</h1>
-        </div>
+        <section className={styles.Project}>
+            <h1>Project</h1>
+        </section>
     );
 };
 

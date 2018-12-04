@@ -7,10 +7,10 @@ import styles from '../styles/About.module.scss';
 
 const about  = () => {
     return (
-        <div className={styles.About}>
+        <section className={styles.About}>
             <MainHeader />
             <MainImg />
-        </div>
+        </section>
     );
 };
 

@@ -2,11 +2,7 @@
     0% {
         opacity: 0;
         transform: translateX(18rem);
-        visibility: hidden;
     }
-
-    
-
     100% {
         opacity: 1;
         transform: translate(0);
@@ -16,12 +12,19 @@
 @keyframes button {
     0% {
         opacity: 0;
-        transform: translateY(15rem);
-        visibility: hidden;
+        transform: translateY(10rem);
     }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
 
-    
-
+@keyframes topToBot {
+    0% {
+        opacity: 0;
+        transform: translateY(-15rem);
+    }
     100% {
         opacity: 1;
         transform: translate(0);

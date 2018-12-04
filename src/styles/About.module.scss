@@ -1,4 +1,18 @@
+@import './constants.scss';
+
 .About {
     display: flex;
     flex-grow: 1;
+    padding: 5rem;
+
+    @media screen and (max-width: $sm) {
+        margin-top: 15rem;
+        overflow: auto;
+    };
+
+    @media screen and (max-width: $xxs) {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 20rem;
+    };
 }

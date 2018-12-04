@@ -1,4 +1,4 @@
-import { SET_CONTENT, OPEN_MODAL, CLOSE_MODAL } from './actionTypes';
+import { SET_CONTENT, OPEN_MODAL, CLOSE_MODAL, SET_NIGHT } from './actionTypes';
 
 export const setContent = content => {
     return {
@@ -16,5 +16,11 @@ export const openModal = () => {
 export const closeModal = () => {
     return {
         type: CLOSE_MODAL
+    }
+};
+
+export const setNight = () => {
+    return {
+        type: SET_NIGHT
     }
 };

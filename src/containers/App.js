@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import Navbar from './Navbar';
+import Navbar from '../components/Navbar';
 import About from '../components/About';
 import Skills from '../components/Skills';
 import Project from '../components/Project';
-import SocialLinks from './SocialLinks';
-import Modal from './Modal';
-import { closeModal } from '../actions/index';
+import SocialLinks from '../components/SocialLinks';
+import Modal from '../components/Modal';
+import { closeModal, setContent, openModal, setNight } from '../actions/index';
 
 import styles from '../styles/App.module.scss';
 
@@ -18,11 +18,10 @@ class App extends Component {
                 this.props.dispatchCloseModal();
             }
         })
-    }
+    };
 
     render () {
         let content = null;
-
         if (this.props.main === 'about') {
             content = <About />
         } else if (this.props.main === 'skills') {
@@ -32,16 +31,15 @@ class App extends Component {
         };
 
         let modal = null;
-
         if (this.props.modal === true) {
-            modal = <Modal />
+            modal = <Modal click={() => this.props.dispatchCloseModal()}/>
         };
 
         return (
-            <main className={styles.App}>
-                <Navbar />
+            <main className={`${styles.App} ${this.props.nightMode ? styles.nightmode : null}`}>
+                <Navbar active={this.props.main} click={(content) => this.props.dispatchContentAction(content)} />
                 {content}
-                <SocialLinks />
+                <SocialLinks night={() => this.props.dispatchNightMode()} click={() => this.props.dispatchModal()}/>
                 {modal}
             </main>
         );
@@ -51,14 +49,25 @@ class App extends Component {
 const mapStateToProps = (state) => {
     return {
         main: state.main,
-        modal: state.modal
+        modal: state.modal,
+        nightMode: state.nightMode
     };
 };
 
 const mapDispatchToProps = dispatch => {
     return {
+        dispatchNightMode: () => {
+            return dispatch(setNight());
+        },
+        dispatchModal: () => {
+            return dispatch(openModal());
+        },
         dispatchCloseModal: () => {
             dispatch(closeModal())
+        },
+        dispatchContentAction: (e) => {
+            const content = e.target.dataset.content;
+            return dispatch(setContent(content));
         }
     };
 };

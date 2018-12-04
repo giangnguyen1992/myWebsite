@@ -1,4 +1,4 @@
-import { SET_CONTENT, OPEN_MODAL, CLOSE_MODAL } from '../actions/actionTypes';
+import { SET_CONTENT, OPEN_MODAL, CLOSE_MODAL, SET_NIGHT } from '../actions/actionTypes';
 
 const reducer = (state, action) => {
     switch (action.type) {
@@ -16,7 +16,12 @@ const reducer = (state, action) => {
             return {
                 ...state,
                 modal: false
-            }       
+            }  
+        case SET_NIGHT:
+            return {
+                ...state,
+                nightMode: !state.nightMode
+            }         
         default:
          return state
     }

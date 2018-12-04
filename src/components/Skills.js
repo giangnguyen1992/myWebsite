@@ -1,74 +1,44 @@
 import React from 'react';
 
 import Button from '../containers/Button';
+import SkillsHeaderLogo from './SkillsHeaderLogo';
+import Languages from './Languages';
 
 import styles from '../styles/Skills.module.scss';
 
 const skills = () => {
-    const iconStyle= {
-        color: '#6abea7'
-    };
-
-    const stackedStyle = {
-        color: '#f7f6f1'
-    };
-
-    let allImg = ['HTML5','CSS3','SASS','Bootstrap','Javascript','jQuery','React','Redux','webpack','Gulp','GitHub','npm','WordPress'];
-    let images = allImg.map(image => {
-        return (
-            <div key={image} className={styles.Skills__right_box}>
-                <img className={styles.Skills__right_logo} src={require(`../assets/img/${image}.png`)} alt={image} />
-                <p>{image}</p>
-            </div>
-        ); 
-    });
-
     return (
-        <div className={styles.Skills}>
+        <section className={styles.Skills}>
             <h1 className={styles.Skills__title}> Meine Skills</h1>
-            <ul className={styles.Skills__list}>
-                <li className={styles.Skills__list_item}>
-                    <span className={`fa-stack fa-2x`}>
-                        <i className={`fas fa-circle fa-stack-2x `} style={iconStyle}></i>
-                        <i className={`far fa-lightbulb fa-stack-1x`} style={stackedStyle}></i>
-                    </span>
-                    <p>Intuitive Webseiten</p>
-                </li>
-                <li className={styles.Skills__list_item}>
-                    <span className={`fa-stack fa-2x`}>
-                        <i className={`fas fa-circle fa-stack-2x `} style={iconStyle}></i>
-                        <i className={`fas fa-code fa-stack-1x`} style={stackedStyle}></i>
-                    </span>
-                    <p>Saubere Codes</p>
-                </li>
-                <li className={styles.Skills__list_item}>
-                    <span className={`fa-stack fa-2x`}>
-                        <i className={`fas fa-circle fa-stack-2x `} style={iconStyle}></i>
-                        <i className={`fas fa-user-edit fa-stack-1x`} style={stackedStyle}></i>
-                    </span>
-                    <p>Individuel designt</p>
-                </li>
-                <li className={styles.Skills__list_item}>
-                    <span className={`fa-stack fa-2x`}>
-                        <i className={`fas fa-circle fa-stack-2x `} style={iconStyle}></i>
-                        <i className={`far fa-kiss-wink-heart fa-stack-1x`} style={stackedStyle}></i>
-                    </span>
-                    <p>Mit Liebe gebaut</p>
-                </li>
-            </ul>
+            <SkillsHeaderLogo />
             <div className={styles.Skills__upper}>
                 <div className={styles.Skills__left}>
-                    <p className={styles.Skills__left_text}>Ich bin selbst ausgebildeter Webentwickler mit Leidenschaft für saubere Codes und intuitive 
+                    <p className={styles.Skills__left_text}>
+                        Ich bin Frontend Entwickler mit Leidenschaft für saubere Codes und intuitive 
                         Webseiten aus Hamburg. Durch meine Neugierde für die neuesten Trends und Frameworks, bleibe 
                         ich immer up to date, um Projekte zeitgemäß umzusetzen.
                     </p>
+                    <p className={styles.Skills__left_text}>
+                    Mein Fokus liegt bei Anwendungen, die in <span className={styles.Skills__red}>React und Javascript</span> geschrieben sind. 
+                    One-way Datenfluss-Architekturen, 
+                    wie <span className={styles.Skills__red}>Redux</span>, nutze ich neuerdings besonders häufig. 
+                    <br />
+                    <br />
+                    Erfahrungen und Fähigkeiten die ich in der Frontend-Entwicklung gesammelt habe beinhalten unter anderem:
+                    </p>
+                    <ul className={`${styles.Skills__left_text} ${styles.Skills__red}`}>
+                        <li>die neuesten ES6-Eigenschaften und ein hohes Verständnis im allgemeinen Javascript</li>
+                        <li>CSS3 Skills wie Flexbox und CSSGrid. Diese nutze ich, um responsive Designs zu ermöglichen</li>
+                        <li>ein gutes Gespür für Design und UI</li>
+                    </ul>
+                    <p className={styles.Skills__left_text}>
+                    Wenn du Lust hast mit mir zusammen zu arbeiten, lass es mich wissen.
+                    </p>
                     <Button>Lasst uns loslegen!</Button>
                 </div>
-                <div className={styles.Skills__right}>
-                    {images}
-                </div>
+                <Languages />
             </div>
-        </div>
+        </section>
     );
 };
 

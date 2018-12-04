@@ -6,6 +6,10 @@
     align-items: center;
     justify-content: center;
     font-family: inherit;
+
+    @media screen and (max-width: $md) {
+        height: 80%;
+    }
     
     
     &__title {
@@ -33,8 +37,12 @@
         border-radius: 1px;
         border: .2px solid $grey; 
 
+        @media screen and (min-width: $xxl) {
+            border: .5px solid $grey; 
+        }
+
         &:focus {
-           outline: none;
+           outline: 2px solid $blue;
         }
     }
 
@@ -49,7 +57,11 @@
         margin-top: 3rem;
 
         &:focus {
-            outline: none;
+            outline: 2px solid $blue;
+        }
+
+        @media screen and (min-width: $xxl) {
+            border: .5px solid $grey; 
         }
     }
 }

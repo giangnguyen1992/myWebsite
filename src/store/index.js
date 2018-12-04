@@ -4,8 +4,9 @@ import logger from 'redux-logger';
 import reducer from '../reducers/index';
 
 const initialState = {
-    main: 'skills',
-    modal: false
+    main: 'about',
+    modal: false,
+    nightMode: false
 };
 
 export const store = createStore(reducer, initialState, applyMiddleware(logger));
