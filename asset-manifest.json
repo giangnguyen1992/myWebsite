@@ -1,7 +1,7 @@
 {
   "main.css": "/giangnguyen/static/css/main.e239cbce.chunk.css",
-  "main.js": "/giangnguyen/static/js/main.8bec41a8.chunk.js",
-  "main.js.map": "/giangnguyen/static/js/main.8bec41a8.chunk.js.map",
+  "main.js": "/giangnguyen/static/js/main.707982de.chunk.js",
+  "main.js.map": "/giangnguyen/static/js/main.707982de.chunk.js.map",
   "static/js/1.41737ae0.chunk.js": "/giangnguyen/static/js/1.41737ae0.chunk.js",
   "static/js/1.41737ae0.chunk.js.map": "/giangnguyen/static/js/1.41737ae0.chunk.js.map",
   "runtime~main.js": "/giangnguyen/static/js/runtime~main.4c4893a9.js",
@@ -17,6 +17,6 @@
   "static/media/WordPress.png": "/giangnguyen/static/media/WordPress.6ded14c8.png",
   "static/css/main.e239cbce.chunk.css.map": "/giangnguyen/static/css/main.e239cbce.chunk.css.map",
   "index.html": "/giangnguyen/index.html",
-  "precache-manifest.e985c39206637805d82c80351549e9c4.js": "/giangnguyen/precache-manifest.e985c39206637805d82c80351549e9c4.js",
+  "precache-manifest.0c1f6f9671828f454ed0a2d55bbf0f2a.js": "/giangnguyen/precache-manifest.0c1f6f9671828f454ed0a2d55bbf0f2a.js",
   "service-worker.js": "/giangnguyen/service-worker.js"
 }

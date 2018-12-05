@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/giangnguyen/static/media/hplogo.52066bd4.png"
   },
   {
-    "revision": "8bec41a89639c75528e7",
+    "revision": "707982ded63d247e04bf",
     "url": "/giangnguyen/static/css/main.e239cbce.chunk.css"
   },
   {
@@ -32,8 +32,8 @@ self.__precacheManifest = [
     "url": "/giangnguyen/static/media/d6e08ef3-40db-4ac3-82df-f062f55a72f5.cf034e78.ttf"
   },
   {
-    "revision": "8bec41a89639c75528e7",
-    "url": "/giangnguyen/static/js/main.8bec41a8.chunk.js"
+    "revision": "707982ded63d247e04bf",
+    "url": "/giangnguyen/static/js/main.707982de.chunk.js"
   },
   {
     "revision": "ad55d76e643932bf33a2c77d890295de",
@@ -64,7 +64,7 @@ self.__precacheManifest = [
     "url": "/giangnguyen/static/media/webpack.4de645e1.png"
   },
   {
-    "revision": "66bfa6d386371771745c3d4fad9db0b3",
+    "revision": "19097c9e5aca232fb22bec34f2d6bf6c",
     "url": "/giangnguyen/index.html"
   }
 ];
