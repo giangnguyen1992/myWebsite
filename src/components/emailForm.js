@@ -13,7 +13,7 @@ const emailform = () => {
                 <input className={styles.emailForm__input} type="text" name="name" placeholder="Name"/>
                 <input className={styles.emailForm__input} type="email" name="_replyto" placeholder="Email"/>
             </div>
-            <textarea className={styles.emailForm__textInput} name="message" placeholder='Wie kann ich helfen?'></textarea>
+            <textarea type="text" className={styles.emailForm__textInput} name="message" placeholder='Wie kann ich helfen?'></textarea>
             <Button type="submit" value="Send">Absenden</Button>
             <input hidden type="text" name="_gotcha" />
         </form>

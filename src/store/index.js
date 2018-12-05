@@ -1,5 +1,5 @@
-import { createStore, applyMiddleware } from 'redux';
-import logger from 'redux-logger';
+import { createStore } from 'redux';
+
 
 import reducer from '../reducers/index';
 
@@ -9,4 +9,4 @@ const initialState = {
     nightMode: false
 };
 
-export const store = createStore(reducer, initialState, applyMiddleware(logger));
+export const store = createStore(reducer, initialState);
