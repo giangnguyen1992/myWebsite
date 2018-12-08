@@ -15,7 +15,7 @@
     }
 
     @media screen and (max-width: $sm) {
-        margin-top: 15.4rem
+        margin-top: 15.4rem;
     }
 
     &__title {
@@ -44,8 +44,14 @@
         flex: 1 0 auto;
         justify-content: space-between;
 
+        @media screen and (max-width: $md) {
+            align-items: flex-start;
+        }
+
         @media screen and (max-width: $sm) {
             flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
         }
     }
 
@@ -56,8 +62,8 @@
             flex: 0 1 40%;
         }
 
-        @media screen and (max-width: $sm) {
-            margin-bottom: 5rem;
+        @media screen and (max-width: $xs) {
+            margin-bottom: 8rem;
         }
 
         &_text {

@@ -15,6 +15,10 @@
         margin-top: 5rem;
     }
 
+    @media screen and (max-width: $sm) {
+        margin-bottom: 0;
+    }
+
     @media screen and (max-width: $xs) {
         flex-wrap: wrap;
         justify-content: space-evenly;

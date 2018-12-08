@@ -6,7 +6,12 @@
     align-items: center;
     justify-content: center;
     font-family: inherit;
-    
+
+    @media screen and (max-width: $sm) {
+        width: 100%;
+        height: 100%;
+        justify-content: space-evenly;
+    }
     
     &__title {
         font-family: $headerFonts;
@@ -17,12 +22,24 @@
     &__text {
         font-size: 1.4rem;
         margin-bottom: 4rem;
+        text-align: center;
+
+        @media screen and (max-width: $sm) {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+        }
     }
 
     &__upper {
         width: 60%;
         display: flex;
         justify-content: space-between;
+
+        @media screen and (max-width: $xs) {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
     }
 
     &__input {
@@ -35,6 +52,11 @@
 
         @media screen and (min-width: $xxl) {
             border: .5px solid $grey; 
+        }
+
+        @media screen and (max-width: $xs) {
+            width: 100%;
+            margin: 2rem 0;
         }
 
         &:focus {
@@ -58,6 +80,11 @@
 
         @media screen and (min-width: $xxl) {
             border: .5px solid $grey; 
+        }
+
+        @media screen and (max-width: $xs) {
+            height: 25rem;
+            margin-top: 0;
         }
     }
 }

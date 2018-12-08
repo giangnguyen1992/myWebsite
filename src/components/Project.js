@@ -5,7 +5,7 @@ import styles from '../styles/Project.module.scss';
 const project = () => {
     return (
         <section className={styles.Project}>
-            <h1>Project</h1>
+            <h1 className={styles.Project__title}>Meine Projekte</h1>
         </section>
     );
 };

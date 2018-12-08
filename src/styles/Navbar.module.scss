@@ -17,6 +17,10 @@
         width: 100%;
     }
 
+    @media screen and (max-width: $xiphone) {
+        font-size: 2.8rem;
+    }
+
     &__box {
         @media screen and (max-width: $sm) {
             display: flex;

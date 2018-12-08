@@ -4,9 +4,34 @@
     display: flex;
     flex-grow: 1;
     padding: 5rem;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    overflow: auto;
 
     @media screen and (max-width: $sm) {
         margin-top: 15rem;
         overflow: auto;
+    }
+
+    &__title {
+        font-family: $headerFonts;
+        font-size: 5rem;
+        margin-top: 0;
+        flex: 0 0 10%;
+
+        @media screen and (max-width: $sm) {
+            display: none;
+            visibility: hidden;
+        }
+        
+        &::after {
+            content: '';
+            position: relative;
+            width: 70%;
+            left: 15%;
+            display: block;
+            border-bottom: .7rem solid $grey;
+        }
     }
 }
