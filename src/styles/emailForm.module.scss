@@ -9,7 +9,7 @@
 
     @media screen and (max-width: $sm) {
         width: 100%;
-        height: 100%;
+        height: 80%;
         justify-content: space-evenly;
     }
     
@@ -48,7 +48,7 @@
         font-family: inherit;
         background-color: $white;
         border-radius: 1px;
-        border: .2px solid $grey; 
+        border: 1px solid $grey; 
 
         @media screen and (min-width: $xxl) {
             border: .5px solid $grey; 
@@ -71,7 +71,7 @@
         font-family: inherit;
         background-color: $white;
         border-radius: 1px;
-        border: .2px solid $grey;
+        border: 1px solid $grey;
         margin-top: 3rem;
 
         &:focus {
