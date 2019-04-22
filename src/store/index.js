@@ -4,7 +4,7 @@ import { createStore } from 'redux';
 import reducer from '../reducers/index';
 
 const initialState = {
-    main: 'project',
+    main: 'about',
     modal: false,
     nightMode: false
 };

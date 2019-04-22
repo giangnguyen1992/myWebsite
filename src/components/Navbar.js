@@ -13,7 +13,7 @@ const navbar = (props) => {
                     <li data-content='skills'  className={`${styles.Navbar__item} ${props.active === 'skills' ? styles.active : null}`} onClick={props.click}>Meine Skills</li>
                     <li data-content='project'  className={`${styles.Navbar__item} ${props.active === 'project' ? styles.active : null}`} onClick={props.click}>Meine Projekte</li>
                 </div>
-                <li className={styles.Navbar__imp}>Giang Nguyen &copy;2018</li>
+                <li className={styles.Navbar__imp}>Giang Nguyen &copy; {new Date().getFullYear()}</li>
             </nav>
         );
 };

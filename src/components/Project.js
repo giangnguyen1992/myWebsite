@@ -5,6 +5,7 @@ import nfPic from '../assets/img/Natflax.JPG';
 import ntPic from '../assets/img/Nexter.JPG';
 import chatPic from '../assets/img/React-Chat.JPG';
 import rePic from '../assets/img/Redux-Chat.JPG';
+import dailyPic from '../assets/img/dailyJournalPic.JPG';
 
 import styles from '../styles/Project.module.scss';
 
@@ -41,6 +42,14 @@ class Project extends Component {
             ghlink: 'https://github.com/giangnguyen1992/nexter',
             fblink: 'https://nexter-178b6.firebaseapp.com/',
             desc: 'Ein Demo-Projekt, das fast ausschließlich mit CSSGrid gebaut wurde.'
+        },
+        dailyJournal: {
+            name: 'dailyJournal (im Aufbau)',
+            img: dailyPic,
+            tech: ['react.js', 'redux', 'javascript', 'SASS'],
+            ghlink: 'https://github.com/giangnguyen1992/dailyJournal',
+            fblink: 'https://dailyjournal-v1.firebaseapp.com/',
+            desc: 'Ein tägliches Journal für mehr Bewusstsein (speichert momentan Userinput nur im localstorage mit Hilfe von redux-persist).'
         }
     }
 
@@ -49,6 +58,7 @@ class Project extends Component {
             <section className={styles.Project}>
                 <h1 className={styles.Project__title}>Meine Projekte</h1>
                 <div className={styles.Project__block}>
+                    <ProjectCard {...this.state.dailyJournal} />
                     <ProjectCard {...this.state.natflax} />
                     <ProjectCard {...this.state.discordio} />
                     <ProjectCard {...this.state.chatkit} />
